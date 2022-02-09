@@ -16,18 +16,17 @@ def word_count(text_file):
     line = line.rstrip()
     words.extend(line.split(" "))
 
+  # punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+  # for word in words:
+  #   for char in word:
+  #     if char in punc:
+  #       word = word.replace(char, "")
   for word in words:
     word_dict[word] = word_dict.get(word, 0) + 1
 
-# my_dict = {'a': 1, 'b': 2, 'c': 3}
-
-# for key, value in my_dict.items():
-#     print("key = {}, value = {}".format(key, value))
-
   for key, value in word_dict.items():
     print("{} {}".format(key, value))
-  
-  return word_dict
+
 
 
     
